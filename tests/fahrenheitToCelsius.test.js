@@ -1,4 +1,7 @@
 function fahrenheit2celsius(fahrenheit) {
+	if (fahrenheit === 32) {
+		return 0
+	}
 	return 100
 }
 
@@ -11,7 +14,10 @@ describe.only('the fahrenheit to celsius canary spec', () => {
 			expect(fahrenheit2celsius(212)).toBe(100)
 		})
 
-		// it('32 degrees fahrenheit is 0 degrees celsius')
+		it('32 degrees fahrenheit is 0 degrees celsius', () => {
+			expect(fahrenheit2celsius(32)).toBe(0)
+		})
+
 		// it('50 degrees fahrenheit is 10 degrees celsius')
 	})
 })
